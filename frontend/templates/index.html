@@ -12,9 +12,9 @@
 <script type=text/javascript>
     $(function() {
         $('a#fetch_data').bind('click', function() {
-            $.getJSON('{{ result_url }}', function(data) {
+            $.post('{{ result_url }}', function(data) {
                 $("#result").text(data.result);
-            });
+            }, 'json');
             return false;
         });
     });

@@ -51,7 +51,7 @@ def index(path):
     )
 
 
-@frontend.route("/_get_data/<path:path>")
+@frontend.route("/data/<path:path>", methods=["POST"])
 def get_data(path):
     token = path
     if not token:
